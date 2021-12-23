@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserInitActivity">
+
+    <ImageView
+        android:id="@+id/bg_middle_user_init"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1.2451"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35000002"
+        app:srcCompat="@drawable/bg_sign_in" />
+    <ImageView
+        android:id="@+id/bg_top_user_init"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorBackGround"
+        app:layout_constraintBottom_toTopOf="@+id/bg_middle_user_init"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/bg_bottom_user_init"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorBackGround"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_middle_user_init"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/btn_back_userinit"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorBackGround"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back" />
+
+    <ScrollView
+        android:id="@+id/view_user_init"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_back_userinit">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view_user_init_inner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/nickname_set"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/TransBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/userinit_intro_1"
+                    android:layout_width="373dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="맛있는 음료를 찾아 떠나기 위해서 준비가 \n필요해요.먼저 이름을 적어주세요."
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/nickname"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/TransPrimary"
+                    android:ems="10"
+                    android:hint="닉네임을 입력하세요"
+                    android:inputType="textPersonName"
+                    android:paddingStart="20dp"
+                    android:textColor="@color/colorBackGround"
+                    android:textColorHint="@color/colorPrimary"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/is_avail_nick"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userinit_intro_1" />
+
+                <ImageView
+                    android:id="@+id/is_avail_nick"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/nickname"
+                    app:layout_constraintDimensionRatio="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/nickname"
+                    app:srcCompat="?attr/actionModeBackground" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/hate_ingredients_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/TransBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nickname_set">
+
+                <TextView
+                    android:id="@+id/userinit_intro_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="혹시 못드시거나 싫어하시는 재료가 \n있으면 알려주세요. 피하도록 도와드립니다."
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ToggleButton
+                    android:id="@+id/ingEXbt_milk"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bt_ingredient_except_off"
+                    android:onClick="trayButtonClick"
+                    android:textColor="@color/colorBackGround"
+                    android:textOff="유제품"
+                    android:textOn="유제품"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintDimensionRatio="1"
+                    app:layout_constraintEnd_toStartOf="@+id/ingEXbt_caffeine"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userinit_intro_2"
+                    app:layout_constraintWidth_percent="0.18" />
+
+                <ToggleButton
+                    android:id="@+id/ingEXbt_caffeine"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bt_ingredient_except_off"
+                    android:onClick="trayButtonClick"
+                    android:textColor="@color/colorBackGround"
+                    android:textOff="카페인"
+                    android:textOn="카페인"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintDimensionRatio="1"
+                    app:layout_constraintEnd_toStartOf="@+id/ingEXbt_nuts"
+                    app:layout_constraintStart_toEndOf="@+id/ingEXbt_milk"
+                    app:layout_constraintTop_toBottomOf="@+id/userinit_intro_2"
+                    app:layout_constraintWidth_percent="0.18" />
+
+                <ToggleButton
+                    android:id="@+id/ingEXbt_nuts"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bt_ingredient_except_off"
+                    android:onClick="trayButtonClick"
+                    android:textColor="@color/colorBackGround"
+                    android:textOff="견과류"
+                    android:textOn="견과류"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintDimensionRatio="1"
+                    app:layout_constraintEnd_toStartOf="@+id/ingEXbt_peach"
+                    app:layout_constraintStart_toEndOf="@+id/ingEXbt_caffeine"
+                    app:layout_constraintTop_toBottomOf="@+id/userinit_intro_2"
+                    app:layout_constraintWidth_percent="0.18" />
+
+                <ToggleButton
+                    android:id="@+id/ingEXbt_peach"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bt_ingredient_except_off"
+                    android:onClick="trayButtonClick"
+                    android:textColor="@color/colorBackGround"
+                    android:textOff="복숭아"
+                    android:textOn="복숭아"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintDimensionRatio="1"
+                    app:layout_constraintEnd_toStartOf="@+id/ingEXbt_sugar"
+                    app:layout_constraintStart_toEndOf="@+id/ingEXbt_nuts"
+                    app:layout_constraintTop_toBottomOf="@+id/userinit_intro_2"
+                    app:layout_constraintWidth_percent="0.18" />
+
+                <ToggleButton
+                    android:id="@+id/ingEXbt_sugar"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bt_ingredient_except_off"
+                    android:onClick="trayButtonClick"
+                    android:textColor="@color/colorBackGround"
+                    android:textOff="당류"
+                    android:textOn="당류"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintDimensionRatio="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ingEXbt_peach"
+                    app:layout_constraintTop_toBottomOf="@+id/userinit_intro_2"
+                    app:layout_constraintWidth_percent="0.18" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/ingredientSearchBox"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/TransPrimary"
+                    android:completionThreshold="1"
+                    android:gravity="center"
+                    android:hapticFeedbackEnabled="false"
+                    android:hint="검색에서 제외할 성분을 여기에 입력하세요."
+                    android:paddingStart="40dp"
+                    android:textColor="@color/colorBackGround"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ingEXbt_caffeine" />
+
+                <TextView
+                    android:id="@+id/userinit_intro_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="아래에서 추가된 성분을 확인하시고 잘못 \n추가되었다면 탭해서 제거하세요"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ingredientSearchBox" />
+
+                <ImageView
+                    android:id="@+id/search_ico"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ingredientSearchBox"
+                    app:layout_constraintStart_toStartOf="@+id/ingredientSearchBox"
+                    app:layout_constraintTop_toTopOf="@+id/ingredientSearchBox"
+                    app:srcCompat="@drawable/ic_search" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/view_hate_ingredients"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/TransPrimary"
+                    android:foregroundGravity="center"
+                    android:padding="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userinit_intro_3" />
+
+                <TextView
+                    android:id="@+id/view_hate_ingredients_empty"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="아직 추가된 성분이 없어요!"
+                    android:textColor="@color/colorBackGround"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/view_hate_ingredients"
+                    app:layout_constraintEnd_toEndOf="@id/view_hate_ingredients"
+                    app:layout_constraintStart_toStartOf="@id/view_hate_ingredients"
+                    app:layout_constraintTop_toTopOf="@id/view_hate_ingredients"></TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/brand_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/TransBlack"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hate_ingredients_set">
+
+                <TextView
+                    android:id="@+id/userinit_intro_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="검색에서 제외할 브랜드를 선택해주세요."
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/brand_row1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/userinit_intro_4">
+
+                    <ImageButton
+                        android:id="@+id/gongcha"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br0"
+                        android:onClick="brandButtonClick"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toStartOf="@+id/dunkin"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17" />
+
+                    <ImageButton
+                        android:id="@+id/dunkin"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br1"
+                        android:onClick="brandButtonClick"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toStartOf="@+id/touslesjours"
+                        app:layout_constraintStart_toEndOf="@+id/gongcha"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17" />
+
+                    <ImageButton
+                        android:id="@+id/touslesjours"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br2"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toStartOf="@+id/mega"
+                        app:layout_constraintStart_toEndOf="@+id/dunkin"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17"
+                        android:onClick="brandButtonClick" />
+
+                    <ImageButton
+                        android:id="@+id/mega"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br3"
+                        android:onClick="brandButtonClick"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toStartOf="@+id/paik"
+                        app:layout_constraintStart_toEndOf="@+id/touslesjours"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17" />
+
+                    <ImageButton
+                        android:id="@+id/paik"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br4"
+                        android:onClick="brandButtonClick"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/mega"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/brand_row2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/brand_row1">
+
+                    <ImageButton
+                        android:id="@+id/angelinus"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br6"
+                        android:onClick="brandButtonClick"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toStartOf="@+id/yogerpresso"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17" />
+
+                    <ImageButton
+                        android:id="@+id/yogerpresso"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br7"
+                        android:onClick="brandButtonClick"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toStartOf="@+id/ediya"
+                        app:layout_constraintStart_toEndOf="@+id/angelinus"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17" />
+
+                    <ImageButton
+                        android:id="@+id/ediya"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br8"
+                        android:onClick="brandButtonClick"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toStartOf="@+id/coffeebay"
+                        app:layout_constraintStart_toEndOf="@+id/yogerpresso"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17" />
+
+                    <ImageButton
+                        android:id="@+id/coffeebay"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br9"
+                        android:onClick="brandButtonClick"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toStartOf="@+id/coffeebean"
+                        app:layout_constraintStart_toEndOf="@+id/ediya"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17" />
+
+                    <ImageButton
+                        android:id="@+id/coffeebean"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br10"
+                        android:onClick="brandButtonClick"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/coffeebay"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/brand_row3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/brand_row2">
+
+                    <ImageButton
+                        android:id="@+id/tomntoms"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br11"
+                        android:onClick="brandButtonClick"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toStartOf="@+id/twosome"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17" />
+
+                    <ImageButton
+                        android:id="@+id/twosome"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br12"
+                        android:onClick="brandButtonClick"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toStartOf="@+id/paris"
+                        app:layout_constraintStart_toEndOf="@+id/tomntoms"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17" />
+
+                    <ImageButton
+                        android:id="@+id/paris"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br13"
+                        android:onClick="brandButtonClick"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toStartOf="@+id/pascucci"
+                        app:layout_constraintStart_toEndOf="@+id/twosome"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17" />
+
+                    <ImageButton
+                        android:id="@+id/pascucci"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br14"
+                        android:onClick="brandButtonClick"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toStartOf="@+id/hollys"
+                        app:layout_constraintStart_toEndOf="@+id/paris"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17" />
+
+                    <ImageButton
+                        android:id="@+id/hollys"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br15"
+                        android:onClick="brandButtonClick"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/pascucci"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/brand_row4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/brand_row3">
+
+                    <ImageButton
+                        android:id="@+id/sb_normal"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br5"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toStartOf="@+id/sb_tea"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17" />
+
+                    <ImageButton
+                        android:id="@+id/sb_tea"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br5"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toStartOf="@+id/sb_reserve"
+                        app:layout_constraintStart_toEndOf="@+id/sb_normal"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17" />
+
+                    <ImageButton
+                        android:id="@+id/sb_reserve"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br5"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toStartOf="@+id/sb_blonde"
+                        app:layout_constraintStart_toEndOf="@+id/sb_tea"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17" />
+
+                    <ImageButton
+                        android:id="@+id/sb_blonde"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br5"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toStartOf="@+id/sb_jeju"
+                        app:layout_constraintStart_toEndOf="@+id/sb_reserve"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17" />
+
+                    <ImageButton
+                        android:id="@+id/sb_jeju"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/br5"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/sb_blonde"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.17" />
+
+                    <Button
+                        android:id="@+id/sb_normal_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/bt_circle_on"
+                        android:gravity="center"
+                        android:onClick="brandButtonClick"
+                        android:text="기본"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/sb_normal"
+                        app:layout_constraintEnd_toEndOf="@id/sb_normal"
+                        app:layout_constraintStart_toStartOf="@id/sb_normal"
+                        app:layout_constraintTop_toTopOf="@id/sb_normal"></Button>
+
+                    <Button
+                        android:id="@+id/sb_tea_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/bt_circle_on"
+                        android:gravity="center"
+                        android:onClick="brandButtonClick"
+                        android:text="티바나"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/sb_tea"
+                        app:layout_constraintEnd_toEndOf="@id/sb_tea"
+                        app:layout_constraintStart_toStartOf="@id/sb_tea"
+                        app:layout_constraintTop_toTopOf="@id/sb_tea"></Button>
+
+                    <Button
+                        android:id="@+id/sb_reserve_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/bt_circle_on"
+                        android:gravity="center"
+                        android:onClick="brandButtonClick"
+                        android:text="리저브"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/sb_reserve"
+                        app:layout_constraintEnd_toEndOf="@id/sb_reserve"
+                        app:layout_constraintStart_toStartOf="@id/sb_reserve"
+                        app:layout_constraintTop_toTopOf="@id/sb_reserve"></Button>
+
+                    <Button
+                        android:id="@+id/sb_blonde_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/bt_circle_on"
+                        android:gravity="center"
+                        android:onClick="brandButtonClick"
+                        android:text="블론드"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/sb_blonde"
+                        app:layout_constraintEnd_toEndOf="@id/sb_blonde"
+                        app:layout_constraintStart_toStartOf="@id/sb_blonde"
+                        app:layout_constraintTop_toTopOf="@id/sb_blonde"></Button>
+
+                    <Button
+                        android:id="@+id/sb_jeju_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/bt_circle_on"
+                        android:gravity="center"
+                        android:onClick="brandButtonClick"
+                        android:text="제주"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/sb_jeju"
+                        app:layout_constraintEnd_toEndOf="@id/sb_jeju"
+                        app:layout_constraintStart_toStartOf="@id/sb_jeju"
+                        app:layout_constraintTop_toTopOf="@id/sb_jeju"></Button>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/detail_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/TransBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/brand_set">
+
+                <TextView
+                    android:id="@+id/userinit_intro_5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="25dp"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="이제 거의 다 끝났어요 \n검색할 가격과 별점 범위를 정해주세요.\n따로 정하지 않으셔도 됩니다."
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/price_set"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/TransPrimary"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/userinit_intro_5">
+
+                    <TextView
+                        android:id="@+id/price_set_txt1"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:text="가격설정"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/min_price"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:background="#00FFFFFF"
+                        android:ems="10"
+                        android:hint="최저가"
+                        android:inputType="numberSigned"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/price_set_txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="start|center_vertical"
+                        android:text="원   ~"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/max_price"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:background="#00FFFFFF"
+                        android:ems="10"
+                        android:hint="최고가"
+                        android:inputType="numberSigned"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/price_set_txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:gravity="start|center_vertical"
+                        android:text="원"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/star_set"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/TransPrimary"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/price_set">
+
+                    <TextView
+                        android:id="@+id/star_set_txt1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:gravity="start|center_vertical"
+                        android:text="평점설정"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RatingBar
+                        android:id="@+id/min_rating"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:isIndicator="false"
+                        android:numStars="5"
+                        android:rating="0"
+                        android:stepSize="1" />
+
+                    <TextView
+                        android:id="@+id/star_set_txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="start|center_vertical"
+                        android:text="~"
+                        android:textColor="@color/colorBackGround"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <RatingBar
+                        android:id="@+id/max_rating"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:isIndicator="false"
+                        android:numStars="5"
+                        android:rating="5"
+                        android:stepSize="1" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/user_set"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/TransBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detail_set">
+
+                <Button
+                    android:id="@+id/btn_user_logout"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/TransPrimary"
+                    android:text="로그아웃"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.30" />
+
+                <Button
+                    android:id="@+id/btn_app_info"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/TransPrimary"
+                    android:text="APP정보"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.30" />
+
+                <Button
+                    android:id="@+id/btn_user_exit"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/TransPrimary"
+                    android:text="회원탈퇴"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.30" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="30dp"
+                android:background="@color/TransBlack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_set">
+
+                <TextView
+                    android:id="@+id/userinit_intro_6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="이제 즐거운 음료 탐험을 떠나보세요\n설정은 언제든지 다시 하실 수 있습니다."
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_user_init"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/TransPrimary"
+                    android:text="맛있는 음료 탐험 시작하기"
+
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/userinit_intro_6" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
