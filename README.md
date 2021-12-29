@@ -32,7 +32,8 @@
 ![image](https://user-images.githubusercontent.com/95491950/147234473-1bbaf08a-3189-46d2-96cb-f30847c44b25.png)
 
 ### 시연
-![image](https://user-images.githubusercontent.com/95491950/147234687-3bf56d41-8086-4b97-a9db-fe313300a1e2.png)
+![시연1](https://user-images.githubusercontent.com/95491950/147672611-45fa8a9e-5ba0-4a9c-8431-afba98cff3cb.png)
+![시연2](https://user-images.githubusercontent.com/95491950/147672650-ed7917f6-b0f4-4cdd-bbb0-2c3f75b3efb2.PNG)
 
 ### 기대 효과
 
